@@ -11,7 +11,7 @@ func = decorator_func(func)
 
 
 # 下面写一个给函数添加运行时间计算的修饰器
-# 无参数修饰器写法
+# old_fund无参数修饰器写法
 import time
 def add_time(old_func):
     def new_func():
@@ -21,7 +21,7 @@ def add_time(old_func):
         print(f"运行时间为{End - Start}")
 
 
-# 带参数修饰器写法
+# 带old_func带参数修饰器写法
 # 修饰器本身只能传入函数指针这一个参数，哪怕后面位置还有参数，实际上也并没有传入 
 # fail: decorator_func(old_func, *args) 这里第二个参数不会传入
 def decorator_func(old_func):
