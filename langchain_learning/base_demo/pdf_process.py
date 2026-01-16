@@ -31,4 +31,4 @@ print(f"切割完成！一共切成了{len(splits)}个小块。")
 # 查看切割出来的内容
 print("\n--- 第一块的内容 ---")
 print(splits[0].page_content)
-print("-"*12)
+print("-"*60)
