@@ -1,10 +1,15 @@
 # 从pdf_process里引用splits(切分好的块)
 from pdf_process import splits
+import os
+import shutil
 from langchain_ollama import OllamaEmbeddings
 from langchain_chroma import Chroma
 
+if os.path.exists("./db"):
+    shutil.rmtree("./db")
+
 # 聘请翻译官
-embeddings = OllamaEmbeddings(model="qwen2.5:7b")
+embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
 print("正在初始化向量数据库...")
 
