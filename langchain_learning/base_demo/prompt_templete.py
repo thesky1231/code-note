@@ -12,6 +12,7 @@ model = ChatOllama(model="qwen2.5:7b", temperature=1)
 # 将输出只保留content部分
 parser = StrOutputParser()
 
+# 构建数据传播链
 chain = prompt | model | parser
 # chain = prompt | model
 
